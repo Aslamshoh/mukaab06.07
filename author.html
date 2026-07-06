@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MUKAAB — Авторский надзор</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="author.css">
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<header class="navbar" id="navbar">
+    <div class="nav-left">
+        <a href="mukaab.html" data-i18n="nav1">Главная</a>
+        <a href="interior-design1.html" data-i18n="nav2">Интерьеры</a>
+        <a href="Architecture service2.html" data-i18n="nav3">Архитектура</a>
+    </div>
+
+    <a class="logo" href="mukaab.html">
+        <img src="images/LOGO-2.png" alt="MUKAAB">
+    </a>
+
+    <div class="nav-right">
+        <a href="services.html" data-i18n="nav4">Услуги</a>
+        <a href="#" data-i18n="nav5m">Портфолио</a>
+        <div class="lang-switch">
+            <button onclick="setLang('ru')" id="btn-ru" class="active">RU</button>
+            <button onclick="setLang('en')" id="btn-en">EN</button>
+        </div>
+        <div class="contact-dropdown">
+            <button class="nav-cta" onclick="toggleContacts()" data-i18n="navCta">Написать нам</button>
+            <div class="contact-menu" id="contactMenu">
+                <a href="https://t.me/mukaab_company" target="_blank">Telegram</a>
+                <a href="https://wa.me/375339161111" target="_blank">WhatsApp</a>
+                <a href="mailto:mukaabcompany@gmail.com" data-i18n="navCta">Написать нам</a>
+            </div>
+        </div>
+    </div>
+
+    <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+</header>
+
+<!-- ── MOBILE MENU ── -->
+<nav class="mobile-menu" id="mobileMenu">
+    <a href="mukaab.html" data-i18n="nav1">Главная</a>
+    <a href="interior-design1.html" data-i18n="nav2">Интерьеры</a>
+    <a href="Architecture service2.html" data-i18n="nav3">Архитектура</a>
+    <a href="services.html" data-i18n="nav4">Услуги</a>
+    <a href="#" data-i18n="nav5m">Портфолио</a>
+    <div class="mobile-menu-lang">
+        <button onclick="setLang('ru')" id="mob-btn-ru" class="active">RU</button>
+        <button onclick="setLang('en')" id="mob-btn-en">EN</button>
+    </div>
+    <div class="mobile-contact-dropdown">
+        <button class="mobile-menu-cta" onclick="toggleMobileContacts()" data-i18n="navCta">Написать нам</button>
+        <div class="mobile-contact-menu" id="mobileContactMenu">
+            <a href="https://t.me/mukaab_company" target="_blank">Telegram</a>
+            <a href="https://wa.me/375339161111" target="_blank">WhatsApp</a>
+            <a href="mailto:mukaabcompany@gmail.com" data-i18n="navCta">Написать нам</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+    <img src="images/61.png" class="hero-image" alt=" ">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <span class="hero-label" data-i18n="heroLabel">Услуги</span>
+        <h1 data-i18n="title">Авторский надзор</h1>
+        <p data-i18n="subtitle">Профессиональное сопровождение проекта на всех этапах реализации — от первого выезда до финальной приёмки.</p>
+    </div>
+</section>
+
+<!-- ── PANEL ── -->
+<section class="services-panel">
+
+    <!-- ═══ КОНТРОЛЬ ═══ -->
+    <div class="panel-section-label">
+        <span data-i18n="sec1">Контроль и соответствие</span>
+    </div>
+
+    <!-- Выезды и проверки -->
+    <div class="service-box">
+        <div class="service-top">
+            <h2 data-i18n="s1h">Выезды на объект</h2>
+    
+            <div class="price-block">
+                <div class="price">20$</div>
+                <div class="price-sub" data-i18n="pervisit">/ выезд</div>
+            </div>
+        </div>
+    
+        <ul>
+            <li data-i18n="s1a">Регулярные плановые визиты</li>
+            <li data-i18n="s1b">Контроль соответствия работ проекту</li>
+            <li data-i18n="s1c">Проверка качества выполнения</li>
+            <li data-i18n="s1d">Контроль применения материалов</li>
+        </ul>
+    </div>
+
+    <!-- Документация -->
+     <!-- Документация -->
+     <div class="service-box">
+        <div class="service-top">
+            <h2 data-i18n="s2h">Рабочая документация</h2>
+            <div class="price-block">
+                <div class="price" data-i18n="s2price">от 50$</div>
+                <div class="price-sub" data-i18n="s2unit">/ корректировка</div>
+            </div>
+        </div>
+        <ul>
+            <li data-i18n="s2a">Внесение корректировок по факту</li>
+            <li data-i18n="s2b">Оперативное решение проектных вопросов</li>
+            <li data-i18n="s2c">Согласование изменений с заказчиком</li>
+            <li data-i18n="s2d">Актуализация чертежей и спецификаций</li>
+        </ul>
+    </div>
+ 
+   <!-- Полный пакет — wide featured -->
+   <div class="service-box wide featured">
+    <div class="service-top">
+        <h2 data-i18n="s3h">Полное сопровождение объекта</h2>
+        <div class="price-block">
+            <div class="price" data-i18n="s3price">По запросу</div>
+            <div class="price-sub" data-i18n="s3unit">/ весь объект</div>
+        </div>
+    </div>
+    <div class="service-description">
+        <p data-i18n="s3desc">Комплексный авторский надзор от начала строительства до финальной сдачи объекта:</p>
+    </div>
+    <ul class="two-col-list">
+        <li data-i18n="s3a">Регулярные выезды на объект</li>
+        <li data-i18n="s3b">Контроль всех строительных работ</li>
+        <li data-i18n="s3c">Консультации подрядчиков и строителей</li>
+        <li data-i18n="s3d">Координация смежных специалистов</li>
+        <li data-i18n="s3e">Фото- и видеоотчёты о ходе работ</li>
+        <li data-i18n="s3f">Участие в приёмке выполненных работ</li>
+        <li data-i18n="s3g">Контроль сроков выполнения работ</li>
+        <li data-i18n="s3h2">Сопровождение до завершения строительства</li>
+    </ul>
+    <div class="premium-note" data-i18n="s3note">Стоимость рассчитывается индивидуально по ТЗ</div>
+</div>
+
+<!-- ═══ ТАРИФЫ ═══ -->
+<div class="panel-section-label">
+    <span data-i18n="sec_price">Тарифы</span>
+</div>
+
+<!-- Разовый выезд -->
+<div class="service-box">
+    <div class="service-top">
+        <h2 data-i18n="p1h">Разовый выезд</h2>
+        <div class="price-block">
+            <div class="price" data-i18n="p1price">80$</div>
+            <div class="price-sub" data-i18n="p1unit">/ визит</div>
+        </div>
+    </div>
+    <div class="service-text">
+        <div class="row"><span data-i18n="p1a">Один выезд на объект по запросу</span></div>
+        <div class="row"><span data-i18n="p1b">Осмотр и фиксация замечаний</span></div>
+        <div class="row"><span data-i18n="p1c">Письменный отчёт заказчику</span></div>
+    </div>
+</div>
+
+<!-- Пакет выездов -->
+<div class="service-box">
+    <div class="service-top">
+        <h2 data-i18n="p2h">Пакет выездов</h2>
+        <div class="price-block">
+            <div class="price" data-i18n="p2price">350$</div>
+            <div class="price-sub" data-i18n="p2unit">/ 5 визитов</div>
+        </div>
+    </div>
+    <div class="service-text">
+        <div class="row"><span data-i18n="p2a">5 плановых выездов на объект</span></div>
+        <div class="row"><span data-i18n="p2b">Контроль по согласованному графику</span></div>
+        <div class="row"><span data-i18n="p2c">Фотоотчёт после каждого выезда</span></div>
+        <div class="row"><span data-i18n="p2d">Экономия 12% vs разовых визитов</span></div>
+    </div>
+</div>
+
+<!-- Ежемесячный -->
+<div class="service-box featured">
+    <div class="service-top">
+        <h2 data-i18n="p3h">Ежемесячный надзор</h2>
+        <div class="price-block">
+            <div class="price" data-i18n="p3price">600$</div>
+            <div class="price-sub" data-i18n="p3unit">/ месяц</div>
+        </div>
+    </div>
+    <div class="service-text">
+        <div class="row"><span data-i18n="p3a">Неограниченные выезды в течение месяца</span></div>
+        <div class="row"><span data-i18n="p3b">Приоритетный ответ в течение 2 часов</span></div>
+        <div class="row"><span data-i18n="p3c">Корректировки документации включены</span></div>
+        <div class="row"><span data-i18n="p3d">Координация подрядчиков</span></div>
+    </div>
+    <div class="premium-note" data-i18n="p3note">Оптимально для активной стройки</div>
+</div>
+    <!-- ═══ ЭТАПЫ ═══ -->
+    <div class="panel-section-label">
+        <span data-i18n="sec2">Этапы работы</span>
+    </div>
+
+    <!-- Этапы — full -->
+    <div class="service-box full">
+        <div class="service-top">
+            <h2 data-i18n="steps_h">Как проходит авторский надзор</h2>
+        </div>
+        <div class="service-text">
+            <div class="row">
+                <span data-i18n="step1">Знакомство с проектом и подрядчиками</span>
+                <span class="row-val">01</span>
+            </div>
+            <div class="row">
+                <span data-i18n="step2">Составление графика выездов на объект</span>
+                <span class="row-val">02</span>
+            </div>
+            <div class="row">
+                <span data-i18n="step3">Регулярный контроль хода строительства</span>
+                <span class="row-val">03</span>
+            </div>
+            <div class="row">
+                <span data-i18n="step4">Фиксация замечаний и внесение корректировок</span>
+                <span class="row-val">04</span>
+            </div>
+            <div class="row">
+                <span data-i18n="step5">Координация и решение проектных вопросов</span>
+                <span class="row-val">05</span>
+            </div>
+            <div class="row">
+                <span data-i18n="step6">Финальная приёмка и закрытие объекта</span>
+                <span class="row-val">06</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ ОБЪЕКТЫ И РЕЗУЛЬТАТ ═══ -->
+    <div class="panel-section-label">
+        <span data-i18n="sec3">Где применяется</span>
+    </div>
+
+    <!-- Объекты -->
+    <div class="service-box">
+        <div class="service-top">
+            <h2 data-i18n="obj_h">Типы объектов</h2>
+        </div>
+        <div class="service-text">
+            <div class="row"><span data-i18n="obj1">Частные дома и виллы</span></div>
+            <div class="row"><span data-i18n="obj2">Квартиры и апартаменты</span></div>
+            <div class="row"><span data-i18n="obj3">Коммерческие объекты</span></div>
+            <div class="row"><span data-i18n="obj4">Рестораны и кафе</span></div>
+            <div class="row"><span data-i18n="obj5">Офисные помещения</span></div>
+            <div class="row"><span data-i18n="obj6">Гостиничные комплексы</span></div>
+        </div>
+    </div>
+
+    <!-- Отчётность -->
+    <div class="service-box">
+        <div class="service-top">
+            <h2 data-i18n="rep_h">Отчётность заказчику</h2>
+        </div>
+        <ul>
+            <li data-i18n="rep1">Фотофиксация каждого выезда</li>
+            <li data-i18n="rep2">Видеоотчёты о ходе строительства</li>
+            <li data-i18n="rep3">Письменные замечания подрядчикам</li>
+            <li data-i18n="rep4">Сводные акты по итогам проверок</li>
+        </ul>
+        <div class="premium-note" data-i18n="rep_note">Прозрачность на каждом этапе</div>
+    </div>
+
+    <!-- Результат — full -->
+    <div class="service-box full featured">
+        <div class="service-top">
+            <h2 data-i18n="res_h">Результат</h2>
+        </div>
+        <div class="result-block">
+            <div class="result-icon">✦</div>
+            <p data-i18n="res_text">Гарантия того, что реализованный объект будет полностью соответствовать <strong>архитектурной концепции</strong>, проектной документации и <strong>стандартам качества</strong>. Вы получаете объект именно таким, каким он был задуман — без отступлений от проекта и скрытых дефектов.</p>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-row">
+        <div>
+            <h3 data-i18n="ctah">Обсудим ваш проект?</h3>
+            <p data-i18n="ctap">Оставьте заявку — свяжемся в течение часа</p>
+        </div>
+        <button class="cta-btn" data-i18n="ctabtn">Оставить заявку</button>
+    </div>
+
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+    <div>© 2026 MUKAAB</div>
+    <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+        <button onclick="openPrivacy()" style="background:none;border:none;color:rgba(255,255,255,.4);font-size:13px;cursor:pointer;font-family:'Montserrat',sans-serif;transition:.3s;padding:0;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'" data-i18n="privacyLink">Политика конфиденциальности</button>
+    </div>
+</footer>
+
+<!-- ── PRIVACY MODAL ── -->
+<div id="privacyOverlay" style="
+    position:fixed;inset:0;z-index:9999;
+    background:rgba(0,0,0,0.55);backdrop-filter:blur(16px);
+    display:flex;justify-content:center;align-items:center;
+    opacity:0;visibility:hidden;transition:.35s ease;
+">
+<div id="privacyModal" style="
+    width:min(860px,94vw);height:min(780px,90vh);
+    background:rgba(8,8,8,0.96);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:4px; overflow:hidden; position:relative;
+    backdrop-filter:blur(30px);
+    box-shadow:0 40px 100px rgba(0,0,0,0.65),inset 0 1px 0 rgba(255,255,255,0.05);
+    transform:translateY(24px) scale(.97);
+    transition:.45s cubic-bezier(.19,1,.22,1);
+    display:flex; flex-direction:column;
+">
+    <div style="padding:32px 40px 26px;border-bottom:1px solid rgba(255,255,255,0.07);background:linear-gradient(to bottom,rgba(255,255,255,.025),transparent);flex-shrink:0;">
+        <div style="font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:#c8a96e;font-weight:700;margin-bottom:12px;" data-i18n="pmLabel">Документ</div>
+        <div style="font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.02em;margin-bottom:6px;" data-i18n="pmTitle">Политика конфиденциальности</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.45);">© ООО «Мукааб» · mukaab.by</div>
+    </div>
+    <div id="pmBody" style="padding:32px 40px 40px;overflow-y:auto;flex:1;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.1) transparent;"></div>
+    <button onclick="closePrivacy()" style="position:absolute;top:20px;right:20px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.04);color:rgba(255,255,255,.6);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.25s;font-family:'Montserrat',sans-serif;"
+        onmouseover="this.style.transform='rotate(90deg)';this.style.background='rgba(255,255,255,.1)';this.style.color='#fff'"
+        onmouseout="this.style.transform='rotate(0deg)';this.style.background='rgba(255,255,255,.04)';this.style.color='rgba(255,255,255,.6)'">✕</button>
+</div>
+</div>
+
+<script src="author.js"></script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MUKAAB — Индивидуальная мебель</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="mebel.css">
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<header class="navbar" id="navbar">
+
+    <div class="nav-left">
+        <a href="mukaab.html" data-i18n="nav1">Главная</a>
+        <a href="interior-design1.html" data-i18n="nav2">Интерьеры</a>
+        <a href="Architecture service2.html" data-i18n="nav3">Архитектура</a>
+    </div>
+
+    <a class="logo" href="mukaab.html">
+        <img src="images/LOGO-2.png" alt="MUKAAB">
+    </a>
+
+    <div class="nav-right">
+        <a href="services.html" data-i18n="nav4">Услуги</a>
+        <a href="#" data-i18n="nav5m">Портфолио</a>
+
+        <div class="lang-switch">
+            <button onclick="setLang('ru')" id="btn-ru" class="active">RU</button>
+            <button onclick="setLang('en')" id="btn-en">EN</button>
+        </div>
+
+        <div class="contact-dropdown">
+            <button class="nav-cta" onclick="toggleContacts()" data-i18n="navCta">Написать нам</button>
+            <div class="contact-menu" id="contactMenu">
+                <a href="https://t.me/mukaab_company" target="_blank">Telegram</a>
+                <a href="https://wa.me/375339161111" target="_blank">WhatsApp</a>
+                <a href="mailto:mukaabcompany@gmail.com" data-i18n="navCta">Написать нам</a>
+            </div>
+        </div>
+    </div>
+
+    <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+
+</header>
+
+<!-- ── MOBILE MENU ── -->
+<nav class="mobile-menu" id="mobileMenu">
+    <a href="mukaab.html" data-i18n="nav1">Главная</a>
+    <a href="interior-design1.html" data-i18n="nav2">Интерьеры</a>
+    <a href="Architecture service2.html" data-i18n="nav3">Архитектура</a>
+    <a href="services.html" data-i18n="nav4">Услуги</a>
+    <a href="#" data-i18n="nav5m">Портфолио</a>
+
+    <div class="mobile-menu-lang">
+        <button onclick="setLang('ru')" id="mob-btn-ru" class="active">RU</button>
+        <button onclick="setLang('en')" id="mob-btn-en">EN</button>
+    </div>
+
+    <div class="mobile-contact-dropdown">
+        <button class="mobile-menu-cta" onclick="toggleMobileContacts()" data-i18n="navCta">Написать нам</button>
+        <div class="mobile-contact-menu" id="mobileContactMenu">
+            <a href="https://t.me/mukaab_company" target="_blank">Telegram</a>
+            <a href="https://wa.me/375339161111" target="_blank">WhatsApp</a>
+            <a href="mailto:mukaabcompany@gmail.com" data-i18n="navCta">Написать нам</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+    <img src="images/59.png" class="hero-image" alt="">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <span class="hero-label" data-i18n="heroLabel">Услуги</span>
+        <h1 data-i18n="title">Индивидуальная<br>мебель</h1>
+        <p data-i18n="subtitle">Проектирование и изготовление мебели по индивидуальным размерам и требованиям заказчика.</p>
+    </div>
+</section>
+
+<!-- ── PANEL ── -->
+<section class="services-panel">
+
+    <!-- ═══ ПРОЕКТИРОВАНИЕ ═══ -->
+    <div class="panel-section-label">
+        <span data-i18n="sec1">Проектирование и дизайн</span>
+    </div>
+
+    <!-- Авторский дизайн -->
+    <div class="service-box">
+        <div class="service-top">
+            <h2 data-i18n="m1h">Авторский дизайн мебели</h2>
+        </div>
+        <ul>
+            <li data-i18n="m1a">Разработка концепции и стилистики</li>
+            <li data-i18n="m1b">Эскизы и 3D-визуализация изделий</li>
+            <li data-i18n="m1c">Подбор материалов и фурнитуры</li>
+            <li data-i18n="m1d">Рабочие чертежи для производства</li>
+        </ul>
+    </div>
+
+    <!-- Кухни -->
+    <div class="service-box">
+        <div class="service-top">
+            <h2 data-i18n="m2h">Кухни по индивидуальному проекту</h2>
+        </div>
+        <ul>
+            <li data-i18n="m2a">Проект под планировку и технику</li>
+            <li data-i18n="m2b">Фасады МДФ, шпон, эмаль, пластик</li>
+            <li data-i18n="m2c">Столешницы из камня, керамики, дерева</li>
+            <li data-i18n="m2d">Встроенная техника и освещение</li>
+        </ul>
+    </div>
+
+    <!-- Гардеробные — wide featured -->
+    <div class="service-box wide featured">
+        <div class="service-top">
+            <h2 data-i18n="m3h">Гардеробные и системы хранения</h2>
+        </div>
+        <div class="service-description">
+            <p data-i18n="m3desc">Проектируем пространство хранения под ваши нужды — от компактной гардеробной до стеллажной системы в гостиной:</p>
+        </div>
+        <ul class="two-col-list">
+            <li data-i18n="m3a">Встроенные и отдельностоящие гардеробные</li>
+            <li data-i18n="m3b">Системы хранения для спален и прихожих</li>
+            <li data-i18n="m3c">Стеллажи и библиотеки под заказ</li>
+            <li data-i18n="m3d">Подсветка, зеркала, аксессуары</li>
+            <li data-i18n="m3e">Оптимальное использование каждого сантиметра</li>
+            <li data-i18n="m3f">Материалы: ЛДСП, шпон, МДФ, металл</li>
+        </ul>
+    </div>
+
+    <!-- ═══ ИЗДЕЛИЯ ═══ -->
+    <div class="panel-section-label">
+        <span data-i18n="sec2">Виды изделий</span>
+    </div>
+
+    <!-- Шкафы -->
+    <div class="service-box">
+        <div class="service-top">
+            <h2 data-i18n="m4h">Шкафы и встроенная мебель</h2>
+        </div>
+        <ul>
+            <li data-i18n="m4a">Шкафы-купе и распашные шкафы</li>
+            <li data-i18n="m4b">Встроенные ниши и подиумы</li>
+            <li data-i18n="m4c">Мебель под скошенные потолки</li>
+            <li data-i18n="m4d">ТВ-зоны и декоративные панели</li>
+        </ul>
+    </div>
+
+    <!-- Мебель для гостиных -->
+    <div class="service-box">
+        <div class="service-top">
+            <h2 data-i18n="m5h">Мебель для гостиных и спален</h2>
+        </div>
+        <ul>
+            <li data-i18n="m5a">Кровати с мягким изголовьем и каркасами</li>
+            <li data-i18n="m5b">Тумбы, комоды и консоли</li>
+            <li data-i18n="m5c">Диваны и банкетки на заказ</li>
+            <li data-i18n="m5d">Туалетные столики и зеркала</li>
+        </ul>
+    </div>
+
+    <!-- Офис и коммерция -->
+    <div class="service-box">
+        <div class="service-top">
+            <h2 data-i18n="m6h">Офисная и коммерческая мебель</h2>
+        </div>
+        <ul>
+            <li data-i18n="m6a">Рабочие столы и переговорные зоны</li>
+            <li data-i18n="m6b">Ресепшн и стойки администраторов</li>
+            <li data-i18n="m6c">Торговое оборудование и витрины</li>
+            <li data-i18n="m6d">Мебель для ресторанов и отелей</li>
+        </ul>
+    </div>
+
+    <!-- ═══ МАТЕРИАЛЫ ═══ -->
+    <div class="panel-section-label">
+        <span data-i18n="sec3">Материалы и исполнение</span>
+    </div>
+
+    <!-- Материалы — full -->
+    <div class="service-box full">
+        <div class="service-top">
+            <h2 data-i18n="mat_h">Подбор материалов и фурнитуры</h2>
+        </div>
+        <div class="materials-grid">
+            <div class="mat-item">
+                <div class="mat-name" data-i18n="mat1n">МДФ и эмаль</div>
+                <div class="mat-desc" data-i18n="mat1d">Гладкие крашеные фасады, матовые и глянцевые покрытия, любые цвета RAL</div>
+            </div>
+            <div class="mat-item">
+                <div class="mat-name" data-i18n="mat2n">Шпон и массив</div>
+                <div class="mat-desc" data-i18n="mat2d">Натуральные породы дерева: дуб, орех, ясень, ольха — под лак, масло или морилку</div>
+            </div>
+            <div class="mat-item">
+                <div class="mat-name" data-i18n="mat3n">ЛДСП и пластик</div>
+                <div class="mat-desc" data-i18n="mat3d">Широкий выбор декоров, имитация камня, металла и дерева, высокая износостойкость</div>
+            </div>
+            <div class="mat-item">
+                <div class="mat-name" data-i18n="mat4n">Камень и керамика</div>
+                <div class="mat-desc" data-i18n="mat4d">Столешницы и подоконники из кварцевого агломерата, натурального мрамора и керамогранита</div>
+            </div>
+            <div class="mat-item">
+                <div class="mat-name" data-i18n="mat5n">Металл и стекло</div>
+                <div class="mat-desc" data-i18n="mat5d">Каркасы и декоративные элементы из стали, латуни, алюминия; закалённое и тонированное стекло</div>
+            </div>
+            <div class="mat-item">
+                <div class="mat-name" data-i18n="mat6n">Фурнитура</div>
+                <div class="mat-desc" data-i18n="mat6d">Blum, Grass, Hettich, Häfele — плавное закрывание, push-to-open, скрытые петли</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ ПРОЦЕСС ═══ -->
+    <div class="panel-section-label">
+        <span data-i18n="sec4">Где применяется</span>
+    </div>
+
+    <!-- Объекты применения — wide -->
+    <div class="service-box wide">
+        <div class="service-top">
+            <h2 data-i18n="obj_h">Подходит для любых объектов</h2>
+        </div>
+        <div class="service-text">
+            <div class="row"><span data-i18n="obj1">Частные дома и квартиры</span></div>
+            <div class="row"><span data-i18n="obj2">Офисы и коворкинги</span></div>
+            <div class="row"><span data-i18n="obj3">Рестораны, кафе и бары</span></div>
+            <div class="row"><span data-i18n="obj4">Отели и апартаменты</span></div>
+            <div class="row"><span data-i18n="obj5">Коммерческие пространства и шоурумы</span></div>
+        </div>
+    </div>
+
+    <!-- Этапы работы -->
+    <div class="service-box">
+        <div class="service-top">
+            <h2 data-i18n="steps_h">Этапы работы</h2>
+        </div>
+        <div class="service-text">
+            <div class="row">
+                <span data-i18n="step1">Замер и техническое задание</span>
+                <span class="row-price">01</span>
+            </div>
+            <div class="row">
+                <span data-i18n="step2">Дизайн-проект и визуализация</span>
+                <span class="row-price">02</span>
+            </div>
+            <div class="row">
+                <span data-i18n="step3">Согласование и производство</span>
+                <span class="row-price">03</span>
+            </div>
+            <div class="row">
+                <span data-i18n="step4">Доставка и монтаж</span>
+                <span class="row-price">04</span>
+            </div>
+        </div>
+        <div class="premium-note" data-i18n="steps_note">Сопровождение на всех этапах</div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-row">
+        <div>
+            <h3 data-i18n="ctah">Обсудим ваш проект?</h3>
+            <p data-i18n="ctap">Оставьте заявку — свяжемся в течение часа</p>
+        </div>
+        <button class="cta-btn" data-i18n="ctabtn">Оставить заявку</button>
+    </div>
+
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+    <div>© 2026 MUKAAB</div>
+    <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+       
+        <button onclick="openPrivacy()" style="background:none;border:none;color:rgba(255,255,255,.4);font-size:13px;cursor:pointer;font-family:'Montserrat',sans-serif;transition:.3s;padding:0;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'" data-i18n="privacyLink">Политика конфиденциальности</button>
+    </div>
+</footer>
+
+<!-- ── PRIVACY MODAL ── -->
+<div id="privacyOverlay" style="
+    position:fixed;inset:0;z-index:9999;
+    background:rgba(0,0,0,0.55);backdrop-filter:blur(16px);
+    display:flex;justify-content:center;align-items:center;
+    opacity:0;visibility:hidden;transition:.35s ease;
+">
+<div id="privacyModal" style="
+    width:min(860px,94vw);height:min(780px,90vh);
+    background:rgba(8,8,8,0.96);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:4px;
+    overflow:hidden;position:relative;
+    backdrop-filter:blur(30px);
+    box-shadow:0 40px 100px rgba(0,0,0,0.65),inset 0 1px 0 rgba(255,255,255,0.05);
+    transform:translateY(24px) scale(.97);
+    transition:.45s cubic-bezier(.19,1,.22,1);
+    display:flex;flex-direction:column;
+">
+    <div style="
+        padding:32px 40px 26px;
+        border-bottom:1px solid rgba(255,255,255,0.07);
+        background:linear-gradient(to bottom,rgba(255,255,255,.025),transparent);
+        flex-shrink:0;
+    ">
+        <div style="font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:#c8a96e;font-weight:700;margin-bottom:12px;" data-i18n="pmLabel">Документ</div>
+        <div style="font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.02em;margin-bottom:6px;" data-i18n="pmTitle">Политика конфиденциальности</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.45);">© ООО «Мукааб» · mukaab.by</div>
+    </div>
+    <div id="pmBody" style="padding:32px 40px 40px;overflow-y:auto;flex:1;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.1) transparent;"></div>
+    <button onclick="closePrivacy()" style="
+        position:absolute;top:20px;right:20px;
+        width:40px;height:40px;border-radius:50%;
+        border:1px solid rgba(255,255,255,.09);
+        background:rgba(255,255,255,.04);
+        color:rgba(255,255,255,.6);font-size:18px;
+        cursor:pointer;display:flex;align-items:center;justify-content:center;
+        transition:.25s;font-family:'Montserrat',sans-serif;
+    " onmouseover="this.style.transform='rotate(90deg)';this.style.background='rgba(255,255,255,.1)';this.style.color='#fff'"
+       onmouseout="this.style.transform='rotate(0deg)';this.style.background='rgba(255,255,255,.04)';this.style.color='rgba(255,255,255,.6)'">✕</button>
+</div>
+</div>
+
+<script src="mebel.js"></script>
+</body>
+</html>

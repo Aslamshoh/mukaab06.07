@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MUKAAB — День с дизайнером</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="designer_day.css">
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<header class="navbar" id="navbar">
+    <div class="nav-left">
+        <a href="mukaab.html" data-i18n="nav1">Главная</a>
+        <a href="#" data-i18n="nav2">Интерьеры</a>
+        <a href="#" data-i18n="nav3">Архитектура</a>
+    </div>
+
+    <a class="logo" href="mukaab.html">
+        <img src="images/LOGO-2.png" alt="MUKAAB">
+    </a>
+
+    <div class="nav-right">
+        <a href="services.html" data-i18n="nav4">Услуги</a>
+        <a href="#" data-i18n="nav5m">Портфолио</a>
+        <div class="lang-switch">
+            <button onclick="setLang('ru')" id="btn-ru" class="active">RU</button>
+            <button onclick="setLang('en')" id="btn-en">EN</button>
+        </div>
+        <div class="contact-dropdown">
+            <button class="nav-cta" onclick="toggleContacts()" data-i18n="navCta">Написать нам</button>
+            <div class="contact-menu" id="contactMenu">
+                <a href="https://t.me/mukaab_company" target="_blank">Telegram</a>
+                <a href="https://wa.me/375339161111" target="_blank">WhatsApp</a>
+                <a href="mailto:mukaabcompany@gmail.com" data-i18n="navCta">Написать нам</a>
+            </div>
+        </div>
+    </div>
+
+    <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+</header>
+
+<!-- ── MOBILE MENU ── -->
+<nav class="mobile-menu" id="mobileMenu">
+    <a href="mukaab.html" data-i18n="nav1">Главная</a>
+    <a href="interior-design1l" data-i18n="nav2">Интерьеры</a>
+    <a href="Architecture service2.html" data-i18n="nav3">Архитектура</a>
+    <a href="services.html" data-i18n="nav4">Услуги</a>
+    <a href="#" data-i18n="nav5m">Портфолио</a>
+    <div class="mobile-menu-lang">
+        <button onclick="setLang('ru')" id="mob-btn-ru" class="active">RU</button>
+        <button onclick="setLang('en')" id="mob-btn-en">EN</button>
+    </div>
+    <div class="mobile-contact-dropdown">
+        <button class="mobile-menu-cta" onclick="toggleMobileContacts()" data-i18n="navCta">Написать нам</button>
+        <div class="mobile-contact-menu" id="mobileContactMenu">
+            <a href="https://t.me/mukaab_company" target="_blank">Telegram</a>
+            <a href="https://wa.me/375339161111" target="_blank">WhatsApp</a>
+            <a href="mailto:mukaabcompany@gmail.com" data-i18n="navCta">Написать нам</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+    <img src="images/62.png" class="hero-image" alt="">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <span class="hero-label" data-i18n="heroLabel">Услуги</span>
+        <h1 data-i18n="title">День с дизайнером</h1>
+        <p data-i18n="subtitle">Личная консультация и выезд дизайнера — решаем задачи вашего интерьера за один насыщенный день.</p>
+    </div>
+</section>
+
+<!-- ── PANEL ── -->
+<section class="services-panel">
+
+    <!-- ═══ ЧТО ВКЛЮЧЕНО ═══ -->
+    <div class="panel-section-label">
+        <span data-i18n="sec1">Что входит в день</span>
+    </div>
+
+    <!-- Утро: диагностика -->
+    <div class="service-box">
+        <div class="service-top">
+            <h2 data-i18n="s1h">Утро — диагностика пространства</h2>
+            <div class="price-block">
+                <div class="price" data-i18n="s1time">3 часа</div>
+                <div class="price-sub" data-i18n="s1unit">/ блок</div>
+            </div>
+        </div>
+        <ul>
+            <li data-i18n="s1a">Выезд на объект и осмотр помещений</li>
+            <li data-i18n="s1b">Анализ планировки и зонирования</li>
+            <li data-i18n="s1c">Разбор ошибок текущего интерьера</li>
+            <li data-i18n="s1d">Обсуждение задач и пожеланий заказчика</li>
+        </ul>
+    </div>
+
+    <!-- День: магазины и материалы -->
+    <div class="service-box">
+        <div class="service-top">
+            <h2 data-i18n="s2h">День — шоурумы и материалы</h2>
+            <div class="price-block">
+                <div class="price" data-i18n="s2time">4 часа</div>
+                <div class="price-sub" data-i18n="s2unit">/ блок</div>
+            </div>
+        </div>
+        <ul>
+            <li data-i18n="s2a">Совместный подбор отделочных материалов</li>
+            <li data-i18n="s2b">Визит в шоурумы мебели и освещения</li>
+            <li data-i18n="s2c">Помощь с цветом, фактурами и сочетаниями</li>
+            <li data-i18n="s2d">Ориентировочные бюджеты по позициям</li>
+        </ul>
+    </div>
+
+    <!-- Итоговый пакет — wide featured -->
+    <div class="service-box wide featured">
+        <div class="service-top">
+            <h2 data-i18n="s3h">Полный день с дизайнером</h2>
+            <div class="price-block">
+                <div class="price" data-i18n="s3price">450$</div>
+                <div class="price-sub" data-i18n="s3unit">/ день</div>
+            </div>
+        </div>
+        <div class="service-description">
+            <p data-i18n="s3desc">8 часов личной работы с дизайнером — от первого осмотра до готового плана действий:</p>
+        </div>
+        <ul class="two-col-list">
+            <li data-i18n="s3a">Выезд на объект и диагностика</li>
+            <li data-i18n="s3b">Разбор планировки и зонирования</li>
+            <li data-i18n="s3c">Совместный шопинг в шоурумах</li>
+            <li data-i18n="s3d">Подбор материалов, мебели, декора</li>
+            <li data-i18n="s3e">Составление концепции интерьера</li>
+            <li data-i18n="s3f">Рекомендации по подрядчикам</li>
+            <li data-i18n="s3g">Предварительная смета по итогам</li>
+            <li data-i18n="s3h2">Итоговый отчёт с фото и референсами</li>
+        </ul>
+        <div class="premium-note" data-i18n="s3note">Транспортные расходы включены</div>
+    </div>
+
+    <!-- ═══ ТАРИФЫ ═══ -->
+    <div class="panel-section-label">
+        <span data-i18n="sec_price">Тарифы</span>
+    </div>
+
+    <!-- Онлайн-консультация -->
+    <div class="service-box">
+        <div class="service-top">
+            <h2 data-i18n="p1h">Онлайн-консультация</h2>
+            <div class="price-block">
+                <div class="price" data-i18n="p1price">90$</div>
+                <div class="price-sub" data-i18n="p1unit">/ 1,5 часа</div>
+            </div>
+        </div>
+        <div class="service-text">
+            <div class="row"><span data-i18n="p1a">Видеозвонок с дизайнером</span></div>
+            <div class="row"><span data-i18n="p1b">Разбор планов, фото и вопросов</span></div>
+            <div class="row"><span data-i18n="p1c">Список рекомендаций после встречи</span></div>
+        </div>
+    </div>
+
+    <!-- Полдня -->
+    <div class="service-box">
+        <div class="service-top">
+            <h2 data-i18n="p2h">Полдня с дизайнером</h2>
+            <div class="price-block">
+                <div class="price" data-i18n="p2price">250$</div>
+                <div class="price-sub" data-i18n="p2unit">/ 4 часа</div>
+            </div>
+        </div>
+        <div class="service-text">
+            <div class="row"><span data-i18n="p2a">Выезд на объект или шоурум</span></div>
+            <div class="row"><span data-i18n="p2b">Консультация на месте</span></div>
+            <div class="row"><span data-i18n="p2c">Краткое резюме по итогам</span></div>
+            <div class="row"><span data-i18n="p2d">Подходит для одной конкретной задачи</span></div>
+        </div>
+    </div>
+
+    <!-- Полный день — featured -->
+    <div class="service-box featured">
+        <div class="service-top">
+            <h2 data-i18n="p3h">Полный день</h2>
+            <div class="price-block">
+                <div class="price" data-i18n="p3price">450$</div>
+                <div class="price-sub" data-i18n="p3unit">/ 8 часов</div>
+            </div>
+        </div>
+        <div class="service-text">
+            <div class="row"><span data-i18n="p3a">Выезд + шоурумы + концепция</span></div>
+            <div class="row"><span data-i18n="p3b">Подбор материалов и мебели</span></div>
+            <div class="row"><span data-i18n="p3c">Итоговый отчёт с референсами</span></div>
+            <div class="row"><span data-i18n="p3d">Предварительная смета по объекту</span></div>
+        </div>
+        <div class="premium-note" data-i18n="p3note">Максимальный результат за один день</div>
+    </div>
+
+    <!-- ═══ КАК ПРОХОДИТ ═══ -->
+    <div class="panel-section-label">
+        <span data-i18n="sec2">Как проходит день</span>
+    </div>
+
+    <!-- Программа дня — full -->
+    <div class="service-box full">
+        <div class="service-top">
+            <h2 data-i18n="steps_h">Программа дня с дизайнером</h2>
+        </div>
+        <div class="service-text">
+            <div class="row">
+                <span data-i18n="step1">Встреча на объекте, осмотр и знакомство</span>
+                <span class="row-val">09:00</span>
+            </div>
+            <div class="row">
+                <span data-i18n="step2">Анализ планировки и разбор задач</span>
+                <span class="row-val">10:00</span>
+            </div>
+            <div class="row">
+                <span data-i18n="step3">Поездка в шоурумы материалов и мебели</span>
+                <span class="row-val">12:00</span>
+            </div>
+            <div class="row">
+                <span data-i18n="step4">Подбор декора, текстиля, освещения</span>
+                <span class="row-val">14:00</span>
+            </div>
+            <div class="row">
+                <span data-i18n="step5">Составление концепции и сметы</span>
+                <span class="row-val">16:00</span>
+            </div>
+            <div class="row">
+                <span data-i18n="step6">Итоговое обсуждение и передача материалов</span>
+                <span class="row-val">18:00</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ КОМУ ПОДХОДИТ ═══ -->
+    <div class="panel-section-label">
+        <span data-i18n="sec3">Кому подходит</span>
+    </div>
+
+    <!-- Ситуации -->
+    <div class="service-box">
+        <div class="service-top">
+            <h2 data-i18n="obj_h">Для каких ситуаций</h2>
+        </div>
+        <div class="service-text">
+            <div class="row"><span data-i18n="obj1">Ремонт с нуля — нужен старт</span></div>
+            <div class="row"><span data-i18n="obj2">Косметическое обновление интерьера</span></div>
+            <div class="row"><span data-i18n="obj3">Покупка квартиры — оценка потенциала</span></div>
+            <div class="row"><span data-i18n="obj4">Тупик в процессе ремонта</span></div>
+            <div class="row"><span data-i18n="obj5">Подбор мебели и предметов интерьера</span></div>
+            <div class="row"><span data-i18n="obj6">Коммерческое помещение под брендинг</span></div>
+        </div>
+    </div>
+
+    <!-- Что получаете -->
+    <div class="service-box">
+        <div class="service-top">
+            <h2 data-i18n="rep_h">Что вы получаете</h2>
+        </div>
+        <ul>
+            <li data-i18n="rep1">Чёткое понимание концепции интерьера</li>
+            <li data-i18n="rep2">Список материалов и поставщиков</li>
+            <li data-i18n="rep3">Фотоотчёт с референсами и пометками</li>
+            <li data-i18n="rep4">Предварительный бюджет по позициям</li>
+        </ul>
+        <div class="premium-note" data-i18n="rep_note">Всё в одном файле после встречи</div>
+    </div>
+
+    <!-- Результат — full featured -->
+    <div class="service-box full featured">
+        <div class="service-top">
+            <h2 data-i18n="res_h">Результат</h2>
+        </div>
+        <div class="result-block">
+            <div class="result-icon">✦</div>
+            <p data-i18n="res_text">После одного дня у вас будет <strong>чёткий план действий</strong>, понимание бюджета и уверенность в выборе. Вы больше не тратите время на хаотичный поиск — дизайнер структурирует ваш запрос и даёт <strong>конкретные решения под ваш объект</strong>.</p>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-row">
+        <div>
+            <h3 data-i18n="ctah">Забронировать день с дизайнером?</h3>
+            <p data-i18n="ctap">Оставьте заявку — свяжемся в течение часа</p>
+        </div>
+        <button class="cta-btn" data-i18n="ctabtn">Оставить заявку</button>
+    </div>
+
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+    <div>© 2026 MUKAAB</div>
+    <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+        
+        <button onclick="openPrivacy()" style="background:none;border:none;color:rgba(255,255,255,.4);font-size:13px;cursor:pointer;font-family:'Montserrat',sans-serif;transition:.3s;padding:0;"
+            onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'"
+            data-i18n="privacyLink">Политика конфиденциальности</button>
+    </div>
+</footer>
+
+<!-- ── PRIVACY MODAL ── -->
+<div id="privacyOverlay" style="
+    position:fixed;inset:0;z-index:9999;
+    background:rgba(0,0,0,0.55);backdrop-filter:blur(16px);
+    display:flex;justify-content:center;align-items:center;
+    opacity:0;visibility:hidden;transition:.35s ease;
+">
+<div id="privacyModal" style="
+    width:min(860px,94vw);height:min(780px,90vh);
+    background:rgba(8,8,8,0.96);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:4px; overflow:hidden; position:relative;
+    backdrop-filter:blur(30px);
+    box-shadow:0 40px 100px rgba(0,0,0,0.65),inset 0 1px 0 rgba(255,255,255,0.05);
+    transform:translateY(24px) scale(.97);
+    transition:.45s cubic-bezier(.19,1,.22,1);
+    display:flex; flex-direction:column;
+">
+    <div style="padding:32px 40px 26px;border-bottom:1px solid rgba(255,255,255,0.07);background:linear-gradient(to bottom,rgba(255,255,255,.025),transparent);flex-shrink:0;">
+        <div style="font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:#c8a96e;font-weight:700;margin-bottom:12px;" data-i18n="pmLabel">Документ</div>
+        <div style="font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.02em;margin-bottom:6px;" data-i18n="pmTitle">Политика конфиденциальности</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.45);">© ООО «Мукааб» · mukaab.by</div>
+    </div>
+    <div id="pmBody" style="padding:32px 40px 40px;overflow-y:auto;flex:1;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.1) transparent;"></div>
+    <button onclick="closePrivacy()" style="position:absolute;top:20px;right:20px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.04);color:rgba(255,255,255,.6);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.25s;font-family:'Montserrat',sans-serif;"
+        onmouseover="this.style.transform='rotate(90deg)';this.style.background='rgba(255,255,255,.1)';this.style.color='#fff'"
+        onmouseout="this.style.transform='rotate(0deg)';this.style.background='rgba(255,255,255,.04)';this.style.color='rgba(255,255,255,.6)'">✕</button>
+</div>
+</div>
+
+<script src="designer_day.js"></script>
+</body>
+</html>

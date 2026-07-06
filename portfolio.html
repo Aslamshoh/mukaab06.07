@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MUKAAB — Портфолио</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<header class="navbar" id="navbar">
+    <div class="nav-left">
+        <a href="mukaab.html" data-i18n="nav1">Главная</a>
+        <a href="interior_design.html" data-i18n="nav2">Интерьеры</a>
+        <a href="Architecture service2.html" data-i18n="nav3">Архитектура</a>
+    </div>
+
+    <a class="logo" href="mukaab.html">
+        <img src="images/LOGO-2.png" alt="MUKAAB">
+    </a>
+
+    <div class="nav-right">
+        <a href="services.html" data-i18n="nav4">Услуги</a>
+        <a href="portfolio.html" data-i18n="nav5m" style="opacity:1;">Вакансии</a>
+        <div class="lang-switch">
+            <button onclick="setLang('ru')" id="btn-ru" class="active">RU</button>
+            <button onclick="setLang('en')" id="btn-en">EN</button>
+        </div>
+        <div class="contact-dropdown">
+            <button class="nav-cta" onclick="toggleContacts()" data-i18n="navCta">Написать нам</button>
+            <div class="contact-menu" id="contactMenu">
+                <a href="https://t.me/mukaab_company" target="_blank">Telegram</a>
+                <a href="https://wa.me/375339161111" target="_blank">WhatsApp</a>
+                <a href="mailto:mukaabcompany@gmail.com">mukaabcompany@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+</header>
+
+<!-- ── MOBILE MENU ── -->
+<nav class="mobile-menu" id="mobileMenu">
+    <a href="mukaab.html" data-i18n="nav1">Главная</a>
+    <a href="мinterior-design1.html" data-i18n="nav2">Интерьеры</a>
+    <a href="Architecture service2.html" data-i18n="nav3">Архитектура</a>
+    <a href="services.html" data-i18n="nav4">Услуги</a>
+    <a href="portfolio.html" data-i18n="nav5m">Вакансии</a>
+    <div class="mobile-menu-lang">
+        <button onclick="setLang('ru')" id="mob-btn-ru" class="active">RU</button>
+        <button onclick="setLang('en')" id="mob-btn-en">EN</button>
+    </div>
+    <div class="mobile-contact-dropdown">
+        <button class="mobile-menu-cta" onclick="toggleMobileContacts()" data-i18n="navCta">Написать нам</button>
+        <div class="mobile-contact-menu" id="mobileContactMenu">
+            <a href="https://t.me/mukaab_company" target="_blank">Telegram</a>
+            <a href="https://wa.me/375339161111" target="_blank">WhatsApp</a>
+            <a href="">Написать нам </a>
+        </div>
+    </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+    <img src="images/portfolio.png" class="hero-image" alt="Портфолио">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 data-i18n="title">Портфолио</h1>
+        <p data-i18n="subtitle">Реализованные проекты в области интерьерного дизайна, архитектуры и авторского надзора.</p>
+    </div>
+</section>
+
+<!-- ── PORTFOLIO ── -->
+<section class="portfolio-panel">
+
+    <!-- Filter bar -->
+    <div class="filter-bar">
+        <span class="filter-label" data-i18n="filterLabel">Категория</span>
+        <button class="filter-btn active" data-cat="all" data-i18n="catAll">Все работы</button>
+        <button class="filter-btn" data-cat="interior" data-i18n="catInt">Интерьер</button>
+        <button class="filter-btn" data-cat="arch" data-i18n="catArch">Архитектура</button>
+        <button class="filter-btn" data-cat="furniture" data-i18n="catFurniture">Мебель</button>
+        <button class="filter-btn" data-cat="commercial" data-i18n="catComm">Коммерческие</button>
+    </div>
+
+    <!-- ─ Интерьеры ─ -->
+    <div class="panel-section-label"><span data-i18n="secInt">Интерьерный дизайн</span></div>
+
+    <div class="project-grid" id="projectGrid">
+
+        <!-- 1 -->
+        <div class="project-card" data-cat="interior" data-project="0" onclick="openProject(0)">
+            <div class="card-thumb">
+                <img src="images/proj1_cover.jpg" alt="Апартаменты Минск">
+                <div class="card-thumb-overlay">
+                    <div class="open-label">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                        <span data-i18n="openBtn">Открыть проект</span>
+                    </div>
+                </div>
+                <div class="card-tag" data-i18n="catInt">Интерьер</div>
+            </div>
+            <div class="card-body">
+                <div class="card-title" data-i18n="p0title">Апартаменты в Минске — 120 м²</div>
+                <div class="card-meta">
+                    <span>📍 Минск</span>
+                    <span>📐 120 м²</span>
+                    <span>🏠 Жилой</span>
+                </div>
+                <div class="card-desc" data-i18n="p0short">Минималистичный интерьер в нейтральной палитре с акцентом на фактуры натурального камня и дерева.</div>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="project-card" data-cat="interior" data-project="1" onclick="openProject(1)">
+            <div class="card-thumb">
+                <img src="images/1.png" alt="Загородный дом">
+                <div class="card-thumb-overlay">
+                    <div class="open-label">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                        <span data-i18n="openBtn">Открыть проект</span>
+                    </div>
+                </div>
+                <div class="card-tag" data-i18n="catInt">Интерьер</div>
+            </div>
+            <div class="card-body">
+                <div class="card-title" data-i18n="p1title">Загородный дом — 280 м²</div>
+                <div class="card-meta">
+                    <span>📍 Минский р-н</span>
+                    <span>📐 280 м²</span>
+                </div>
+                <div class="card-desc" data-i18n="p1short">Тёплый скандинавский стиль с элементами japandi — дерево, лён, натуральный свет.</div>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="project-card featured" data-cat="interior" data-project="2" onclick="openProject(2)">
+            <div class="card-thumb">
+                <img src="images/proj3_cover.jpg" alt="Пентхаус">
+                <div class="card-thumb-overlay">
+                    <div class="open-label">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                        <span data-i18n="openBtn">Открыть проект</span>
+                    </div>
+                </div>
+                <div class="card-tag">Premium</div>
+            </div>
+            <div class="card-body">
+                <div class="card-title" data-i18n="p2title">Пентхаус — 340 м²</div>
+                <div class="card-meta">
+                    <span>📍 Минск</span>
+                    <span>📐 340 м²</span>
+                </div>
+                <div class="card-desc" data-i18n="p2short">Представительский интерьер с панорамными видами. Мрамор, латунь, велюр, авторская мебель.</div>
+            </div>
+        </div>
+
+        <!-- ─ Архитектура ─ -->
+        <div class="panel-section-label" style="grid-column:1/-1"><span data-i18n="secArch">Архитектура и фасады</span></div>
+
+        <!-- 4 -->
+        <div class="project-card" data-cat="arch" data-project="3" onclick="openProject(3)">
+            <div class="card-thumb">
+                <img src="images/3.jpg" alt="Частный дом">
+                <div class="card-thumb-overlay">
+                    <div class="open-label">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                        <span data-i18n="openBtn">Открыть проект</span>
+                    </div>
+                </div>
+                <div class="card-tag" data-i18n="catArch">Архитектура</div>
+            </div>
+            <div class="card-body">
+                <div class="card-title" data-i18n="p3title">Частный дом — концепция фасада</div>
+                <div class="card-meta"><span>📍 Минский р-н</span><span>📐 420 м²</span></div>
+                <div class="card-desc" data-i18n="p3short">Современный минималистичный фасад из клинкерного кирпича и тёмного металла.</div>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="project-card wide" data-cat="arch" data-project="4" onclick="openProject(4)">
+            <div class="card-thumb">
+                <img src="images/proj5_cover.jpg" alt="Вилла">
+                <div class="card-thumb-overlay">
+                    <div class="open-label">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                        <span data-i18n="openBtn">Открыть проект</span>
+                    </div>
+                </div>
+                <div class="card-tag" data-i18n="catArch">Архитектура</div>
+            </div>
+            <div class="card-body">
+                <div class="card-title" data-i18n="p4title">Вилла на озере — авторский надзор</div>
+                <div class="card-meta"><span>📍 Нарочь</span><span>📐 560 м²</span></div>
+                <div class="card-desc" data-i18n="p4short">Полный цикл от проекта до сдачи. Стекло, бетон, дерево — органичная связь с ландшафтом.</div>
+            </div>
+        </div>
+
+        <!-- ─ Коммерческие ─ -->
+        <div class="panel-section-label" style="grid-column:1/-1"><span data-i18n="secComm">Коммерческие объекты</span></div>
+
+        <!-- 6 -->
+        <div class="project-card" data-cat="commercial" data-project="5" onclick="openProject(5)">
+            <div class="card-thumb">
+                <img src="images/proj6_cover.jpg" alt="Ресторан">
+                <div class="card-thumb-overlay">
+                    <div class="open-label">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                        <span data-i18n="openBtn">Открыть проект</span>
+                    </div>
+                </div>
+                <div class="card-tag" data-i18n="catComm">Коммерческий</div>
+            </div>
+            <div class="card-body">
+                <div class="card-title" data-i18n="p5title">Ресторан fine dining — Минск</div>
+                <div class="card-meta"><span>📍 Минск</span><span>📐 240 м²</span></div>
+                <div class="card-desc" data-i18n="p5short">Камерная атмосфера, тёмная палитра, латунь и вельвет. Акустическое зонирование.</div>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="project-card" data-cat="commercial" data-project="6" onclick="openProject(6)">
+            <div class="card-thumb">
+                <img src="images/proj7_cover.jpg" alt="Офис">
+                <div class="card-thumb-overlay">
+                    <div class="open-label">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                        <span data-i18n="openBtn">Открыть проект</span>
+                    </div>
+                </div>
+                <div class="card-tag" data-i18n="catComm">Офис</div>
+            </div>
+            <div class="card-body">
+                <div class="card-title" data-i18n="p6title">IT-офис — 1 200 м²</div>
+                <div class="card-meta"><span>📍 Минск</span><span>📐 1 200 м²</span></div>
+                <div class="card-desc" data-i18n="p6short">Гибкое зонирование, акустика, зоны отдыха и переговорных. Корпоративный брендинг в интерьере.</div>
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="project-card featured" data-cat="commercial" data-project="7" onclick="openProject(7)">
+            <div class="card-thumb">
+                <img src="images/proj8_cover.jpg" alt="Отель">
+                <div class="card-thumb-overlay">
+                    <div class="open-label">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                        <span data-i18n="openBtn">Открыть проект</span>
+                    </div>
+                </div>
+                <div class="card-tag">Hotel</div>
+            </div>
+            <div class="card-body">
+                <div class="card-title" data-i18n="p7title">Бутик-отель — 32 номера</div>
+                <div class="card-meta"><span>📍 Минск</span><span>📐 2 800 м²</span></div>
+                <div class="card-desc" data-i18n="p7short">Авторская концепция интерьеров: лобби, ресторан, номера. Полный авторский надзор.</div>
+            </div>
+        </div>
+
+    </div><!-- /project-grid -->
+
+    <!-- CTA -->
+    <div class="cta-row">
+        <div>
+            <h3 data-i18n="ctah">Обсудим ваш проект?</h3>
+            <p data-i18n="ctap">Расскажите о задаче — ответим в течение часа</p>
+        </div>
+        <button class="cta-btn" data-i18n="ctabtn">Связаться с нами</button>
+    </div>
+
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+    <div>© 2026 MUKAAB</div>
+    <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+        <button onclick="openPrivacy()" style="background:none;border:none;color:rgba(255,255,255,.4);font-size:13px;cursor:pointer;font-family:'Montserrat',sans-serif;transition:.3s;padding:0;"
+            onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'"
+            data-i18n="privacyLink">Политика конфиденциальности</button>
+    </div>
+</footer>
+
+<!-- ── PROJECT MODAL ── -->
+<div class="proj-overlay" id="projOverlay" onclick="handleOverlayClick(event)">
+    <div class="proj-modal" id="projModal">
+        <button class="modal-close" onclick="closeProject()">✕</button>
+
+        <!-- Gallery -->
+        <div class="proj-gallery">
+            <div class="gallery-track" id="galleryTrack"></div>
+            <div class="gallery-overlay"></div>
+            <button class="gallery-btn prev" onclick="galleryPrev()">‹</button>
+            <button class="gallery-btn next" onclick="galleryNext()">›</button>
+            <div class="gallery-counter" id="galleryCounter">1 / 1</div>
+        </div>
+
+        <!-- Thumb strip -->
+        <div class="thumb-strip" id="thumbStrip"></div>
+
+        <!-- Body -->
+        <div class="proj-body">
+            <div class="proj-info">
+                <span class="proj-cat-label" id="mCat"></span>
+                <div class="proj-title" id="mTitle"></div>
+                <div class="proj-desc" id="mDesc"></div>
+                <div class="proj-tags" id="mTags"></div>
+            </div>
+            <div class="proj-meta-panel" id="mMeta"></div>
+        </div>
+    </div>
+</div>
+
+<!-- ── PRIVACY MODAL ── -->
+<div class="priv-overlay" id="privOverlay" onclick="if(event.target===this)closePrivacy()">
+    <div class="priv-modal">
+        <div class="priv-head">
+            <div style="font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:#c8a96e;font-weight:700;margin-bottom:12px;" data-i18n="pmLabel">Документ</div>
+            <div style="font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.02em;margin-bottom:6px;" data-i18n="pmTitle">Политика конфиденциальности</div>
+            <div style="font-size:13px;color:rgba(255,255,255,.45);">© ООО «Мукааб» · mukaab.by</div>
+        </div>
+        <div class="priv-body" id="privBody"></div>
+        <button onclick="closePrivacy()" class="modal-close" style="top:18px;right:18px;">✕</button>
+    </div>
+</div>
+
+<script src="portfolio.js"></script>
+</body>
+</html>
